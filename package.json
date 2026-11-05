@@ -1,0 +1,9 @@
+{
+  "name": "daghta",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html style.css app.js zip.js dist/",
+    "test": "node --test"
+  }
+}

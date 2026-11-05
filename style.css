@@ -1,0 +1,71 @@
+:root{font-family:Tahoma,Arial,sans-serif;color:#25233b;background:#f8f9fd;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0}
+button,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #a99cf8;outline-offset:3px}
+.page{max-width:1120px;margin:auto;padding:0 36px}
+.header{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eaeaf2}
+.brand{display:flex;align-items:center;gap:10px;color:#26233d;font-size:27px;font-weight:700;text-decoration:none}
+.brand-icon{display:grid;place-items:center;width:37px;height:37px;border-radius:12px;background:#6c56e7;color:white;font-size:30px;line-height:1;transform:rotate(-35deg)}
+.brand-dot{color:#6c56e7}
+.header-note{display:flex;align-items:center;gap:8px;color:#77768a;font-size:13px;font-weight:500}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#56c898;box-shadow:0 0 0 4px #e3f7ef}
+main{max-width:800px;margin:auto}
+.intro{text-align:center;padding:66px 0 35px}
+.eyebrow{display:inline-flex;gap:7px;align-items:center;color:#6b58d8;background:#efedff;border:1px solid #e8e4ff;border-radius:30px;padding:7px 14px;font-size:12px;font-weight:600}
+.eyebrow span{font-size:15px}
+h1{font-size:43px;letter-spacing:-1.6px;line-height:1.4;margin:16px 0 4px}
+h1 span{color:#7059e8}
+.intro>p{margin:0;color:#888799;font-size:15px}
+.workspace{background:white;border:1px solid #eeeef5;border-radius:20px;padding:28px;box-shadow:0 18px 55px rgba(48,42,110,.07)}
+.workspace-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.section-kicker{color:#7664e5;font-size:11px;font-weight:700;margin-bottom:4px}
+.workspace-heading h2{font-size:21px;margin:0 0 4px}
+.workspace-heading p,.list-heading p{font-size:13px;color:#9694a4;margin:0}
+.zip-badge{width:51px;height:56px;border-radius:13px;background:#f2efff;color:#705be1;display:grid;place-content:center;text-align:center;font-size:12px;font-weight:700;line-height:1.1}
+.zip-badge span{font-size:17px}
+.drop-zone{border:1.5px dashed #c9c1f4;border-radius:15px;background:#fbfaff;text-align:center;padding:30px 20px 24px;transition:background .2s,border-color .2s}
+.drop-zone.dragging{background:#f1eeff;border-color:#7059e8}
+.upload-icon{width:53px;height:53px;border-radius:16px;display:grid;place-items:center;background:#edeaff;color:#715ce4;margin:0 auto 15px}
+.upload-icon svg{width:25px;height:25px}
+.drop-zone h3{margin:0;font-size:16px}
+.drop-zone p{margin:6px 0 19px;font-size:13px;color:#9391a3}
+.select-button{border:0;border-radius:9px;background:#6d57e6;color:#fff;padding:11px 22px;font-size:13px;font-weight:600;box-shadow:0 5px 12px #6d57e62b}
+.select-button:hover,.compress-button:hover{background:#5e49d5}
+.select-button span{font-size:17px;margin-right:8px}
+.drop-hint{margin-top:19px;color:#aaa9b8;font-size:11px}
+.drop-hint span{padding:0 6px;color:#d0cedc}
+.file-section{margin-top:25px}
+.list-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.list-heading h3{margin:0 0 4px;font-size:14px}
+.count{display:inline-grid;place-items:center;min-width:21px;height:21px;border-radius:7px;background:#f1efff;color:#715ce4;font-size:11px}
+.text-button,.remove-button{border:0;background:none;color:#a09eae;font-size:12px}
+.text-button:hover,.remove-button:hover{color:#dd5b6b}
+.file-list{list-style:none;padding:0;margin:0;max-height:230px;overflow:auto}
+.file-item{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid #f1f0f5}
+.file-icon{display:grid;place-items:center;flex:none;width:37px;height:37px;border-radius:10px;background:#f4f2ff;color:#7966e8;font-size:17px}
+.file-info{min-width:0;flex:1}
+.file-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;font-weight:600;direction:plaintext}
+.file-size{display:block;color:#a29fac;font-size:11px}
+.remove-button{font-size:20px;line-height:1;padding:5px}
+.archive-name{margin:20px 0 14px}
+.archive-name label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}
+.input-wrap{display:flex;align-items:center;border:1px solid #e9e8f1;border-radius:9px;padding:0 12px;direction:rtl}
+.input-wrap:focus-within{border-color:#9c8df2}
+.input-wrap input{min-width:0;flex:1;border:0;outline:0;background:transparent;padding:10px 0;color:#34314c}
+.input-wrap span{color:#9e9baa;font-size:12px}
+.compress-button{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;border:0;border-radius:9px;background:#6d57e6;color:white;font-size:13px;font-weight:700;padding:13px}
+button:disabled,input:disabled{opacity:.55;cursor:not-allowed}
+.message{font-size:12px;color:#c94c5d;margin:0}
+.message:not(:empty){margin-top:15px}
+.message.success{color:#258a65}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:39px 5px 65px}
+.benefit{display:flex;align-items:flex-start;gap:11px}
+.benefit-icon{display:grid;place-items:center;width:38px;height:38px;flex:none;border-radius:11px;font-size:20px}
+.violet{background:#eeebff;color:#705de2}.green{background:#e8f7f0;color:#58b78e}.orange{background:#fff1e8;color:#e3a06a}
+.benefit h3{font-size:13px;margin:0 0 4px}
+.benefit p{font-size:11px;color:#9997a7;margin:0}
+footer{border-top:1px solid #eaeaf2;padding:22px 0 25px;display:flex;justify-content:space-between;color:#aaa8b5;font-size:11px}
+.heart{color:#a494ed}
+@media(max-width:600px){.page{padding:0 18px}.header{height:76px}.brand{font-size:23px}.header-note{font-size:11px}.intro{padding:48px 0 27px}h1{font-size:32px}.intro>p{font-size:13px}.workspace{padding:19px;border-radius:16px}.workspace-heading h2{font-size:19px}.drop-zone{padding:28px 12px 22px}.benefits{grid-template-columns:1fr;gap:20px;padding:30px 5px 40px}footer{gap:10px;flex-wrap:wrap}}

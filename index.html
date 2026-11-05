@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>ضَغطة | ضغط الملفات بسهولة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="./" aria-label="ضغطة، الصفحة الرئيسية">
+        <span class="brand-icon" aria-hidden="true">⌁</span>
+        <span>ضَغطة<span class="brand-dot">.</span></span>
+      </a>
+      <span class="header-note"><span class="status-dot"></span> أداة مجانية وآمنة</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span>✦</span> ملفات أقل حجماً، مشاركة أسهل</div>
+        <h1>كل ملفاتك في <span>ضَغطة.</span></h1>
+        <p>اجمع ملفاتك واضغطها في ملف ZIP واحد، بكل سهولة وخصوصية.</p>
+      </section>
+
+      <section class="workspace" aria-label="ضغط الملفات">
+        <div class="workspace-heading">
+          <div>
+            <div class="section-kicker">لنبدأ من هنا</div>
+            <h2>ضغط الملفات</h2>
+            <p>أضف الملفات التي تريد جمعها في ملف واحد.</p>
+          </div>
+          <div class="zip-badge" aria-hidden="true">ZIP <span>↙</span></div>
+        </div>
+
+        <div id="drop-zone" class="drop-zone">
+          <div class="upload-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L8 8m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>اسحب ملفاتك وأفلتها هنا</h3>
+          <p>أو اختر الملفات من جهازك للبدء</p>
+          <button type="button" class="select-button" id="select-files">اختيار الملفات <span aria-hidden="true">＋</span></button>
+          <input id="file-input" type="file" multiple hidden>
+          <div class="drop-hint">جميع أنواع الملفات مدعومة <span>•</span> حتى 256 ميجابايت إجمالاً</div>
+        </div>
+
+        <div id="file-section" class="file-section" hidden>
+          <div class="list-heading">
+            <div><h3>الملفات المضافة <span id="file-count" class="count">0</span></h3><p id="total-size"></p></div>
+            <button type="button" id="clear-files" class="text-button">حذف الكل</button>
+          </div>
+          <ul id="file-list" class="file-list"></ul>
+          <div class="archive-name">
+            <label for="archive-name">اسم الملف المضغوط</label>
+            <div class="input-wrap"><input id="archive-name" value="ملفاتي" maxlength="120" autocomplete="off"><span dir="ltr">.zip</span></div>
+          </div>
+          <button type="button" id="compress" class="compress-button"><span id="compress-label">ضغط وتحميل الملفات</span><span aria-hidden="true">↓</span></button>
+        </div>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="benefits" aria-label="مميزات الأداة">
+        <div class="benefit"><span class="benefit-icon violet">◇</span><div><h3>خصوصيتك أولاً</h3><p>ملفاتك تبقى على جهازك دائماً.</p></div></div>
+        <div class="benefit"><span class="benefit-icon green">✧</span><div><h3>سهل وسريع</h3><p>خطوات بسيطة وملفك جاهز.</p></div></div>
+        <div class="benefit"><span class="benefit-icon orange">▤</span><div><h3>كل ملفاتك معاً</h3><p>اجمع أنواع الملفات في مكان واحد.</p></div></div>
+      </section>
+    </main>
+    <footer><span>صُنع لتكون مشاركة الملفات أبسط <span class="heart">♥</span></span><span>ضَغطة © 2026</span></footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

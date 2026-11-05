@@ -21,10 +21,44 @@
       <section class="intro">
         <div class="eyebrow"><span>✦</span> ملفات أقل حجماً، مشاركة أسهل</div>
         <h1>كل ملفاتك في <span>ضَغطة.</span></h1>
-        <p>اجمع ملفاتك واضغطها في ملف ZIP واحد، بكل سهولة وخصوصية.</p>
+        <p>صغّر ملفات PDF أو اجمع ملفاتك في ZIP، بكل سهولة وخصوصية.</p>
       </section>
 
-      <section class="workspace" aria-label="ضغط الملفات">
+      <div class="tool-tabs" role="group" aria-label="نوع الضغط">
+        <button id="pdf-tab" type="button" aria-pressed="true" aria-controls="pdf-panel">ضغط PDF</button>
+        <button id="zip-tab" type="button" aria-pressed="false" aria-controls="zip-panel">تجميع الملفات ZIP</button>
+      </div>
+
+      <section id="pdf-panel" class="workspace" aria-label="ضغط PDF">
+        <div class="workspace-heading"><div><div class="section-kicker">حجم أصغر، مشاركة أسهل</div><h2>ضغط ملف PDF</h2><p>تقليل دقة صور الصفحات مع اختيار الجودة المناسبة.</p></div><div class="zip-badge" aria-hidden="true">PDF <span>↓</span></div></div>
+        <div id="pdf-drop" class="drop-zone">
+          <h3>أضف ملف PDF</h3><p>اسحبه هنا أو اختره من جهازك</p>
+          <button id="pdf-select" class="select-button" type="button">اختيار PDF ＋</button>
+          <input id="pdf-input" type="file" accept=".pdf,application/pdf" hidden>
+          <div class="drop-hint">ملف واحد حتى 256 ميجابايت • تتم المعالجة على جهازك</div>
+        </div>
+        <div id="pdf-controls" hidden>
+          <div class="pdf-file"><div><strong id="pdf-name"></strong><p id="pdf-size"></p></div><button id="pdf-remove" type="button" class="text-button">إزالة الملف</button></div>
+          <fieldset class="quality-options"><legend>درجة الضغط</legend>
+            <label><input type="radio" name="pdf-quality" value="light"><span><strong>خفيف</strong><small>وضوح أعلى • حجم أكبر</small></span></label>
+            <label><input type="radio" name="pdf-quality" value="balanced" checked><span><strong>متوازن</strong><small>للقراءة والمشاركة</small></span></label>
+            <label><input type="radio" name="pdf-quality" value="strong"><span><strong>قوي</strong><small>حجم أقل • تفاصيل أقل</small></span></label>
+          </fieldset>
+          <p class="pdf-notice">يناسب الملفات المصوّرة. تُحوَّل الصفحات إلى صور؛ لا تُحفظ إمكانية البحث ونسخ النص والروابط والنماذج والتوقيعات الرقمية. احتفظ بالملف الأصلي.</p>
+          <button id="pdf-compress" class="compress-button" type="button">ضغط PDF</button>
+        </div>
+        <div id="pdf-progress-section" class="pdf-progress" hidden><label for="pdf-progress" id="pdf-progress-label">جارٍ التحضير…</label><progress id="pdf-progress" max="100" value="0"></progress><button id="pdf-cancel" type="button" class="text-button">إلغاء</button></div>
+        <p id="pdf-message" class="message" role="status" aria-live="polite"></p>
+        <section id="pdf-result" class="pdf-result" aria-label="نتيجة الضغط" hidden>
+          <h3>ملفك جاهز</h3>
+          <div class="size-comparison"><div><span>الحجم الأصلي</span><strong id="pdf-before"></strong></div><div><span>بعد الضغط</span><strong id="pdf-after"></strong></div><div><span>التوفير</span><strong id="pdf-savings"></strong></div></div>
+          <details><summary>معاينة الصفحة الأولى</summary><img id="pdf-preview" alt="معاينة الصفحة الأولى بعد الضغط"></details>
+          <a id="pdf-download" class="compress-button" download>تنزيل PDF المضغوط ↓</a>
+          <p class="pdf-result-hint">راجع وضوح الصفحات قبل مشاركة النسخة المضغوطة.</p>
+        </section>
+      </section>
+
+      <section id="zip-panel" class="workspace" aria-label="ضغط الملفات" hidden>
         <div class="workspace-heading">
           <div>
             <div class="section-kicker">لنبدأ من هنا</div>
@@ -69,5 +103,7 @@
     <footer><span>صُنع لتكون مشاركة الملفات أبسط <span class="heart">♥</span></span><span>ضَغطة © 2026</span></footer>
   </div>
   <script type="module" src="app.js"></script>
+  <script type="module" src="pdf-app.js"></script>
 </body>
 </html>
+
